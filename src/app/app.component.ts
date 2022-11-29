@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hw3-Directives';
+  showSecret = false;
+  log: Array<number> = [];
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
+  }
 }
